@@ -89,4 +89,3 @@ janela.mainloop()
 
 
 
-janela.mainloop()

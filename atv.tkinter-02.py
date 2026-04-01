@@ -20,9 +20,9 @@ entrada_idade.grid(row=3, column=1)
 #ETIQUETA DE DADOS PROFISSIONAIS
 tk.Label(janela, text="Dados profissionais:",font=("Arial", 10, "bold")).grid(row=4, column=0)
 #COMBOX
-combo_escolaridade = ttk.Combobox(janela, width=25, values=[ "Ensino Médio completo", "Ensino Médio incompleto", "Cursando Ensino Médio", "Cursando Ensino Superior"])
-combo_escolaridade.set("Selecione  sua escolaridade")
-combo_escolaridade.grid(row=5, column=1)
+entrada_escolaridade = ttk.Combobox(janela, width=25, values=[ "Ensino Médio completo", "Ensino Médio incompleto", "Cursando Ensino Médio", "Cursando Ensino Superior"])
+entrada_escolaridade.set("Selecione  sua escolaridade")
+entrada_escolaridade.grid(row=5, column=1)
 #RADIOBUTTON
 opcao = tk.IntVar
 
@@ -38,6 +38,30 @@ tk.Radiobutton(janela, text="Técnico em Informática", font=("Arial", 10), valu
      
 tk.Radiobutton(janela, text="Técnico em Estética", font=("Arial", 10), value=4, variable=opcao)\
 .place(x=150, y=240)
+
+def clicar():
+       nome = entrada_nome.get()
+       idade= entrada_idade.get()
+       escolaridade = entrada_escolaridade()
+     
+       if opcao.get() == 1:
+             area_de_atuacao = "Técnico em Enfermagem"
+       elif opcao.get() == 2:
+             area_de_atuacao = "Técnico em Segurança do Trabalho"
+       elif opcao.get() == 3:
+             area_de_atuacao = "Técnico em Informática"
+       elif opcao.get() == 4:
+             area_de_atuacao = "Técnico em Estética"
+
+       messagebox.showinfo("Mensagem: ",f"Nome: {nome}, Idade: {idade}, Escolaridade:{escolaridade}, Área de Atuação:{area_de_atuacao}.")
+
+btn = tk.Button(janela, text="Enviar formulário", command=clicar)
+btn.place(x=150, y=280)
+
+    
+
+             
+            
 
      
 
