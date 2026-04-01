@@ -7,7 +7,7 @@
 7,Adaptador USB,50,20.00
 8,HD Externo,15,350.00
 9,SSD 240GB,12,300.00
-10,Webcam HD,18,120.00
+10,Webcam hd,18,120.00
 11,Notebook I5,8,3200.00
 12,Tablet 10 Pol,10,1200.00
 13,Smart Phone,15,1800.00
